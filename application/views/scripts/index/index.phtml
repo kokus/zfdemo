@@ -1,0 +1,66 @@
+
+<div class="row">
+  <div class="panel">
+  <h4 class="hide-for-small">AlertSite.com<hr></h4>
+    <h5 class="subheader"><?php echo $this->translate('Home-Text');?></h5>
+    <p><?php 
+          // Prints out locale value en_US, en_GB, es_PE etc. 
+          $value = Zend_Registry::get('Zend_Locale');
+          echo "<pre>" . var_dump($value); ?>
+  </div>
+</div>
+
+<div class="row">
+  <hr>
+</div>
+
+<h4><?php echo $this->translate('Featured'); ?></h4>
+
+<div class="row">
+  <dl class="tabs contained">
+    <dd class="active">
+      <a class="active" href="#players"><?php echo $this->translate('Players'); ?></a>
+    </dd>
+    <dd>
+        <a href="#teams"><?php echo $this->translate('Teams'); ?></a></dd>
+    <dd><a href="#leagues"><?php echo $this->translate('Leagues-Tournaments'); ?></a></dd>
+  </dl>
+  <ul class="tabs-content contained">
+    <li id="playersTab" class="active">
+      <ul class="block-grid six-up">
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Player Name</a></h7>
+      </ul>
+    </li>
+    <li id="teamsTab">
+      <ul class="block-grid six-up">
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Team Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Team Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Team Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Team Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Team Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">Team Name</a></h7>
+      </ul>
+    </li>
+    <li id="leaguesTab">
+      <ul class="block-grid six-up">
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+        <li><a href="#"><img src="http://placehold.it/80x80"></a><h7><a href="">League Name</a></h7>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+

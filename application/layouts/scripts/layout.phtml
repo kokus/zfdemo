@@ -1,0 +1,155 @@
+<?php
+  $this->headTitle()->setSeparator(' - ');
+  $this->headTitle('AlertSite.com','PREPEND');
+
+  echo $this->doctype(); ?>
+
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en"> 
+<!--<![endif]-->
+<head>
+  <?php $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8'); ?>
+  <!-- Set the viewport width to device width for mobile -->
+  <?php $this->headMeta()->appendName('viewport','width=device-width'); ?>
+  
+  <!-- Included CSS Files (Compressed) -->
+  <?php $this->headLink()->appendStylesheet('/css/foundation.min.css')
+                         ->appendStylesheet('/css/app.css'); ?>
+ 
+  <?php $this->headScript()->appendFile('/javascripts/modernizr.foundation.js')
+                            ->appendFile('/javascripts/jquery.foundation.navigation.js'); ?>
+
+  <?php echo $this->headMeta(); ?>
+  
+  <?php echo $this->headTitle(); ?>
+
+  <?php echo $this->headLink(); ?>
+  
+  <?php echo $this->headScript(); ?>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+ <!-- container -->
+ <div id="container" class="row">
+  <!-- Top header -->
+  <?php echo $this->render('_header.phtml') ?>
+
+  <!-- Main Navigation - NEEDS a way to add has-flyout class to non active li-->
+  <!-- USE THIS TO FIX width of nav - http://foundation.zurb.com/page-templates/so-boxy.html -->
+
+  <div id="navbar" class="row">
+    <div class="twelve columns">
+      <?php echo $this->navigation()->menu()->setUlClass('nav-bar'); ?>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs
+  <div class="row">
+    <div class="twelve columns">
+      <?php //echo $this->navigation()->breadcrumbs()->setMinDepth(0)->setLinkLast(true)->setSeparator('/');?>
+     <!-- <ul class="breadcrumbs">
+        <li><span>Home</span></li>
+        <li><span>Teams</span></li>
+      </ul> 
+    </div>
+  </div> -->    
+
+  <!-- Main Content -->
+  <div class="row">
+    <div id="sidebar" class="three column hide-for-small">
+       <div class="panel callout radius">
+          <h5>Join Banner</h5>
+        <p>Join AlertSite.com</p>
+      </div>
+      <div class="panel">
+          <h5>Find Us on Facebook</h5>
+          <p>Like Alertsite.</p>
+      </div>
+
+<!--       <div class="panel">
+         <h5>This is an example of Single Partial.</h5>
+        <?php echo $this->partial('_sample1.phtml',array(
+          'player_name' => 'Lionel Messi',
+          'player_team' => 'FC Barcelona',
+          'player_country' => 'Argentina',
+          )); 
+        ?>
+      </div>
+      <div class="panel">
+        <h5>This is an example of Loop Partial.</h5>
+        <ul>
+          <li>
+            <?php echo $this->partialLoop('_sampleloop.phtml',array(
+                array('player_name' => 'Lionel Messi','player_team' => 'FC Barcelona'),
+                array('player_name' => 'Andres Iniesta','player_team' => 'FC Barcelona'),
+                array('player_name' => 'Xavi','player_team' => 'FC Barcelona'),
+              )); 
+            ?>
+          </li>
+        </ul>
+      </div> -->
+
+    </div>
+
+    <div id="main" class="nine column">
+      <?php echo $this->layout()->content; ?>
+    </div>
+  </div>
+
+<?php echo $this->render('_footer.phtml') ?>
+
+</div>
+<!-- container --> 
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  
+  <script src="/javascripts/modernizr.foundation.js"></script>
+  
+  <script src="/javascripts/jquery.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.reveal.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.orbit.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.navigation.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.buttons.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.tabs.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.forms.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.tooltips.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.accordion.js"></script>
+  
+  <script src="/javascripts/jquery.placeholder.js"></script>
+  
+  <script src="/javascripts/jquery.foundation.alerts.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="/javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="/javascripts/app.js"></script>
+  
+  <script>
+  	$(document).foundationNavigation();
+  </script>
+</body>
+</html>

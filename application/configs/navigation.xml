@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+        <home>
+            <label>Home</label>
+            <uri>/index/index</uri>
+        </home>
+
+        <players>
+            <label>Players</label>
+             <uri>/player/index</uri>
+        </players>
+
+        <teams>
+            <label>Teams</label>
+             <uri>/team/index</uri>
+        </teams>
+
+        <leagues>
+            <label>Leagues-Tournaments</label>
+            <uri>/competition/index</uri>
+        </leagues>
+
+        <scoreboard>
+            <label>Scoreboard</label>
+            <uri>/scoreboard/index</uri>
+        </scoreboard>
+    </nav>
+</configdata>
